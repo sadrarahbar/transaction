@@ -81,3 +81,54 @@ p {
     font-size: 1.7rem;
   }
 }
+
+/************************************** lists *******************************/
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  list-style-image: url(../images/tick.svg);
+  padding-left: 3rem;
+  color: var(--color-heading);
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+  }
+}
+
+/*************************************** Icons **********************************/
+.icon {
+  width: 60px;
+  height: 60px;
+}
+
+.icon--small {
+  width: 35px;
+  height: 35px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon--secondary {
+  fill: var(--color-secondary);
+}
+
+.icon--black {
+  fill: var(--color-dark);
+}
