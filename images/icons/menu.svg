@@ -1,1 +1,7 @@
-<svg id="light" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m21.5 24h-19c-1.379 0-2.5-1.122-2.5-2.5v-19c0-1.378 1.121-2.5 2.5-2.5h19c1.379 0 2.5 1.122 2.5 2.5v19c0 1.378-1.121 2.5-2.5 2.5zm-19-23c-.827 0-1.5.673-1.5 1.5v19c0 .827.673 1.5 1.5 1.5h19c.827 0 1.5-.673 1.5-1.5v-19c0-.827-.673-1.5-1.5-1.5z"/></g><g><path d="m16.5 8h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z"/></g><g><path d="m16.5 12.5h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z"/></g><g><path d="m16.5 17h-9c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h9c.276 0 .5.224.5.5s-.224.5-.5.5z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20">
+  <g id="toggle_menu" data-name="toggle menu" transform="translate(0 -0.462)">
+    <rect id="Rectangle_13" data-name="Rectangle 13" width="24" height="4" rx="2" transform="translate(0 0.462)" fill="#646466"/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="24" height="4" rx="2" transform="translate(0 8.462)" fill="#646466"/>
+    <rect id="Rectangle_15" data-name="Rectangle 15" width="24" height="4" rx="2" transform="translate(0 16.462)" fill="#646466"/>
+  </g>
+</svg>

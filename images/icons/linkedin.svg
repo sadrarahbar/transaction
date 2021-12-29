@@ -1,0 +1,8 @@
+<svg id="linkedin" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <path id="Path_859" data-name="Path 859" d="M20,18.75A1.25,1.25,0,0,1,18.75,20H1.25A1.25,1.25,0,0,1,0,18.75V1.25A1.25,1.25,0,0,1,1.25,0h17.5A1.25,1.25,0,0,1,20,1.25Z" fill="#646466"/>
+  <g id="Group_110" data-name="Group 110" transform="translate(-0.368 0.325)">
+    <path id="Path_860" data-name="Path 860" d="M17.849,11c-1.8,0-2.115.658-2.263,1.293V11H13v9.053h2.587V14.88a1.163,1.163,0,0,1,1.293-1.293,1.167,1.167,0,0,1,1.293,1.293v5.173H20.76V15.527C20.76,12.94,20.423,11,17.849,11Z" transform="translate(-4.957 -4.212)" fill="#fff"/>
+    <circle id="Ellipse_16" data-name="Ellipse 16" cx="1.25" cy="1.25" r="1.25" transform="translate(4.368 2.675)" fill="#fff"/>
+    <rect id="Rectangle_30" data-name="Rectangle 30" width="2.5" height="9.053" transform="translate(4.368 6.788)" fill="#fff"/>
+  </g>
+</svg>
