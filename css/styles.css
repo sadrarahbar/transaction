@@ -2,10 +2,11 @@
 :root {
   --color-primary: #fff685;
   --color-secondary: #ee1c25;
-  --color-dark: #000;
+  --color-dark: #646466;
+  --color-white: #fff;
   --color-body: #e7e7e8;
   --color-heading: #000000;
-  --color-border: #707070;
+  --color-border: #e7e7e8;
   --color-text-black: #000;
   --color-text-gray: #646466;
   --color-text-gold: #d2ac67;
@@ -28,25 +29,28 @@
 html {
   /* 62.5% -> 62.5 * 16px = 10px */
   /* for relative font-size with browser setting */
+  direction: rtl;
   font-size: 62.5%;
 }
 body {
-  color: var(--color-body);
+  background-color: var(--color-body);
   font-family: 'IRANSans', Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
+  text-align: right;
 }
 
 h1,
 h2,
 h3 {
   color: var(--color-heading);
-  margin-bottom: 1rem;
   line-height: 1.1;
+  margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 h2 {
   font-size: 1.7rem;
@@ -62,6 +66,13 @@ h4 {
 
 p {
   margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  padding: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -94,14 +105,14 @@ p {
 }
 
 .list--tick {
+  color: var(--color-heading);
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
-  color: var(--color-heading);
 }
 
 .list--tick .list__item {
-  padding-left: 0.5rem;
   margin-bottom: 1rem;
+  padding-left: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -112,13 +123,18 @@ p {
 
 /*************************************** Icons **********************************/
 .icon {
-  width: 60px;
   height: 60px;
+  width: 60px;
 }
 
 .icon--small {
-  width: 35px;
-  height: 35px;
+  height: 24px;
+  width: 24px;
+}
+
+.icon--smallest {
+  height: 24px;
+  width: 24px;
 }
 
 .icon--primary {
@@ -131,4 +147,168 @@ p {
 
 .icon--black {
   fill: var(--color-dark);
+}
+/*********************************** Header *************************************/
+.header {
+  align-items: center;
+  display: flex;
+  padding: 1rem 2.1rem;
+}
+.header__brand {
+  height: 70px;
+  line-height: 1;
+  margin-right: 1.5rem;
+  transition: height 0.3s;
+}
+.header__brand > img {
+  height: 100%;
+}
+.header__title {
+  flex: 1 1 auto;
+  text-align: left;
+}
+.header__toggler {
+  cursor: pointer;
+  opacity: 1;
+  transition: box-shadow 0.15s;
+}
+.nav.nav--expanded .header__toggler {
+  border-radius: 5px;
+  box-shadow: 0 0 0 3px #666;
+  opacity: 1;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    flex-direction: column;
+    padding: 6rem 0 2rem;
+  }
+  .header__toggler {
+    display: none;
+  }
+  .header__brand {
+    height: 17rem;
+    margin-right: 0;
+  }
+  .header__title {
+    margin-top: 2.5rem;
+  }
+}
+
+/*********************************** Navogation Bar *******************************/
+.nav {
+  flex-grow: 1;
+}
+.nav__list {
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  width: 100%;
+}
+.nav--expanded .nav__list {
+  max-height: 100vh;
+  opacity: 1;
+}
+.nav__item {
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+.nav__item > a {
+  color: var(--color-text-black);
+  transition: color 0.3s;
+}
+.nav__item > a:hover {
+  color: var(--color-dark);
+}
+.nav__active {
+  background-color: var(--color-primary);
+}
+.nav__link {
+  align-items: center;
+  display: flex;
+  justify-content: start;
+}
+.nav__icon {
+  height: 19px;
+}
+@media screen and (min-width: 1024px) {
+  .nav__list {
+    max-height: 100%;
+    opacity: 1;
+    width: auto;
+  }
+  .nav__item {
+    font-size: 1.4rem;
+    padding: 1.7rem 0;
+  }
+  .nav__icon {
+    height: 21px;
+    width: 47px;
+  }
+}
+
+/******************************** Social Media ***************************/
+.social {
+  padding: 0;
+}
+.social__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  width: 100%;
+}
+.social--expanded .social__list {
+  max-height: 100vh;
+  opacity: 1;
+  padding: 15px;
+}
+.social__item {
+  line-height: 1;
+  margin: 0 7px;
+}
+.social__link {
+  line-height: 1;
+}
+@media screen and (min-width: 1024px) {
+  .social {
+    padding: 15px 0;
+  }
+  .social__list {
+    max-height: 100%;
+    opacity: 1;
+    width: auto;
+  }
+}
+/*********************************** Sidebar *****************************/
+.sidebar {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.sidebar::after {
+  background: url(../images/flag.svg);
+  background-size: cover;
+  content: '';
+  height: 44px;
+  left: -1px;
+  position: absolute;
+  top: 23px;
+  width: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .sidebar::after {
+    height: 110px;
+    left: -2px;
+    top: 66px;
+    width: 38px;
+  }
 }
