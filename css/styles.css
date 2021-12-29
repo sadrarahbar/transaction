@@ -312,3 +312,30 @@ ul {
     width: 38px;
   }
 }
+
+/*********************************** main *****************************/
+.main {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  min-height: 100px;
+}
+
+/*********************************** Grids *******************************/
+.grid {
+  display: grid;
+  grid-gap: 15px;
+  height: auto;
+  padding: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-gap: 25px;
+    height: 100vh;
+    padding: 25px;
+  }
+  .grid--1x2 {
+    grid-template: auto / 30rem 1fr;
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
+}
