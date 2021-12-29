@@ -36,7 +36,7 @@ body {
   background-color: var(--color-body);
   font-family: 'IRANSans', Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
-  line-height: 1.5;
+  line-height: 1;
   text-align: right;
 }
 
@@ -47,7 +47,6 @@ h3 {
   line-height: 1.1;
   margin-bottom: 1rem;
 }
-
 h1 {
   font-size: 1.6rem;
   font-weight: 500;
@@ -63,11 +62,9 @@ h4 {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 p {
   margin-top: 0;
 }
-
 a {
   text-decoration: none;
 }
@@ -96,25 +93,22 @@ ul {
 /************************************** lists *******************************/
 .list {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
 }
-
 .list--inline .list__item {
   display: inline-block;
   margin-right: 2rem;
 }
-
 .list--tick {
   color: var(--color-heading);
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
 }
-
 .list--tick .list__item {
   margin-bottom: 1rem;
   padding-left: 0.5rem;
 }
-
 @media screen and (min-width: 1024px) {
   .list--tick .list__item {
     padding-left: 0;
@@ -126,28 +120,24 @@ ul {
   height: 60px;
   width: 60px;
 }
-
 .icon--small {
   height: 24px;
   width: 24px;
 }
-
 .icon--smallest {
   height: 24px;
   width: 24px;
 }
-
 .icon--primary {
   fill: var(--color-primary);
 }
-
 .icon--secondary {
   fill: var(--color-secondary);
 }
-
 .icon--black {
   fill: var(--color-dark);
 }
+
 /*********************************** Header *************************************/
 .header {
   align-items: center;
@@ -223,7 +213,7 @@ ul {
 .nav__item > a:hover {
   color: var(--color-dark);
 }
-.nav__active {
+.nav__item.nav--active {
   background-color: var(--color-primary);
 }
 .nav__link {
@@ -286,6 +276,7 @@ ul {
     width: auto;
   }
 }
+
 /*********************************** Sidebar *****************************/
 .sidebar {
   background-color: var(--color-white);
@@ -318,8 +309,71 @@ ul {
   background-color: var(--color-white);
   border-radius: var(--border-radius);
   min-height: 100px;
+  margin-bottom: 52px;
 }
-
+@media screen and (min-width: 1024px) {
+  .main {
+    margin-bottom: 0;
+  }
+}
+/*********************************** footer *****************************/
+.tab {
+  background-color: var(--color-white);
+  border-top: 17px solid var(--color-border);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+}
+.tab__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+.tab__item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0.5;
+  flex-grow: 1;
+}
+.tab__item.tab--active {
+  opacity: 1;
+  transition: 0.2s;
+  background-color: var(--color-primary);
+}
+.tab__item.tab--active::after {
+  background: url(../images/flag.svg);
+  background-size: cover;
+  content: '';
+  height: 44px;
+  left: 0;
+  position: absolute;
+  top: -16px;
+  width: 15px;
+  transform: rotate(90deg);
+  right: 0;
+  margin: auto;
+}
+.tab__item.tab--active .tab__link {
+  margin-top: 7px;
+}
+.tab__link {
+  display: flex;
+  transition: 0.5s;
+}
+.tab__link svg {
+  height: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .tab {
+    display: none;
+  }
+}
 /*********************************** Grids *******************************/
 .grid {
   display: grid;

@@ -25,7 +25,7 @@
     <div class="grid grid--1x2">
         <!-- Sidebar Section -->
         <section class="sidebar">
-            <div class="header">
+            <header class="header">
                 <svg onclick="toggler_click()" class="icon icon--small icon--black header__toggler">
                     <use xlink:href=" images/sprite.svg#menu"></use>
                 </svg>
@@ -33,26 +33,29 @@
                     <img src="images/bmiLogo.svg" alt="لوگو بانک ملی ایران" />
                 </a>
                 <h1 class="header__title">سقف تراکنش های بانکی</h1>
-            </div>
+            </header>
             <nav id="nav" class="nav">
                 <ul class="list nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#"><svg class="icon icon--black nav__icon">
+                    <li class="nav__item" item_id="1"><a class="nav__link" href="#"><svg
+                                class="icon icon--black nav__icon">
                                 <use xlink:href="images/sprite.svg#IranUser"></use>
                             </svg><span>اشخاص حقیقی ایرانی</span> </a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">
+                    <li class="nav__item" item_id="2"><a class="nav__link" href="#">
                             <svg class="icon icon--black nav__icon">
                                 <use xlink:href="images/sprite.svg#IranUser18"></use>
                             </svg>
                             <span>اشخاص حقیقی ایرانی محجور (زیر 18سال)</span></a></li>
-                    <li class="nav__item nav__active"><a class="nav__link" href="#"><svg
+                    <li class="nav__item nav--active" item_id="3"><a class="nav__link" href="#"><svg
                                 class="icon icon--black nav__icon">
                                 <use xlink:href="images/sprite.svg#IranCompany"></use>
                             </svg><span>اشخاص حقوقی ایرانی</span></a></li>
-                    <li class="nav__item"><a class="nav__link" href="#"><svg class="icon icon--black nav__icon">
+                    <li class="nav__item" item_id="4"><a class="nav__link" href="#"><svg
+                                class="icon icon--black nav__icon">
                                 <use xlink:href="images/sprite.svg#ForeignUser"></use>
                             </svg><span>اشخاص حقیقی غیر ایرانی (اتباع
                                 بیگانه)</span></a></li>
-                    <li class="nav__item"><a class="nav__link" href="#"><svg class="icon icon--black nav__icon">
+                    <li class="nav__item" item_id="5"><a class="nav__link" href="#"><svg
+                                class="icon icon--black nav__icon">
                                 <use xlink:href="images/sprite.svg#ForeignCompany"></use>
                             </svg><span>اشخاص حقوقی غیر ایرانی (اتباع
                                 بیگانه)</span></a>
@@ -86,6 +89,39 @@
         </section>
         <section class="main">
 
+        </section>
+        <section class="tab">
+            <ul class="list tab__list">
+                <li class="tab__item" item_id="11"><a href="#" class="tab__link">
+                        <svg class="icon icon--black tab__icon">
+                            <use xlink:href="images/sprite.svg#IranUser"></use>
+                        </svg></a>
+                </li>
+                <li class="tab__item tab--active" item_id="22"><a href="#" class="tab__link">
+                        <svg class="icon icon--black tab__icon">
+                            <use xlink:href="images/sprite.svg#IranUser18"></use>
+                        </svg></a>
+                    </a>
+                </li>
+                <li class="tab__item" item_id="33"><a href="#" class="tab__link">
+                        <svg class="icon icon--black tab__icon">
+                            <use xlink:href="images/sprite.svg#IranCompany"></use>
+                        </svg></a>
+                    </a>
+                </li>
+                <li class="tab__item" item_id="44"><a href="#" class="tab__link">
+                        <svg class="icon icon--black tab__icon">
+                            <use xlink:href="images/sprite.svg#ForeignUser"></use>
+                        </svg></a>
+                    </a>
+                </li>
+                <li class="tab__item" item_id="55"><a href="#" class="tab__link">
+                        <svg class="icon icon--black tab__icon">
+                            <use xlink:href="images/sprite.svg#ForeignCompany"></use>
+                        </svg></a>
+                    </a>
+                </li>
+            </ul>
         </section>
     </div>
 
