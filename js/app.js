@@ -67,3 +67,20 @@ function setClass(id, id2) {
     const social = document.getElementById('social');
     social.classList.remove('social--expanded');
 }
+
+
+/************************************ Formating ****************************** */
+$(document).ready(function () {
+
+    const numbers = document.querySelectorAll(".card__value");
+    numbers.forEach((item) => {
+        const number = currencyFormat(parseInt(item.innerHTML));
+        if (number !== 'NaN') {
+            item.innerHTML = number;
+            // console.log(number);
+        }
+    });
+});
+function currencyFormat(num) {
+    return num.toLocaleString();
+}
