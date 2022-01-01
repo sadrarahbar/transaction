@@ -1,26 +1,27 @@
-//--Show Page Function
+//--------------------------------------- Show Page Function -----------------------------------------------
 function showPage(pageId) {
     const page = pages[pageId];
     let pageElement = document.getElementById('page');
 
-    //-- Create page header ------------------------------------------------
-    let pageHeader = `<div class="page__header">
+    //----------------------------------- Create page header ------------------------------------------------
+    let pageHeader = `<div class="page__header" data-aos="fade-zoom" data-aos-duration="2500">
                             <svg class="icon icon--large">
                                 <use xlink:href="images/sprite.svg#${page.pageIcon}"></use>
                             </svg>
                             <h2 class="page__title">${page.pageName}</h2>
                       </div>`;
 
-    //-- Create plans ----------------------------------------------------
+    //-------------------------------------- Create plans ----------------------------------------------------
     let plans = '';
     page.plans.forEach(plan => {
 
-        //plan header--------------------------------------------------------
+        //----------------------------------- plan header -------------------------------------------------
         let planHedaer = `<div class="plan__header">
                               <h3 class="plan__title">${plan.planName}</h3>
                           </div>`;
 
-        //plan body--------------------------------------------------------
+        //------------------------------------ plan body ----------------------------------------------------
+        //-- add general cards
         const genCardData = plan.cards[0];
         let generalCard = `<div class="card">
                                 <ul class="list card__list">
@@ -43,6 +44,7 @@ function showPage(pageId) {
                                 </ul>
                            </div>`;
 
+        //-- add intra cards
         const intraCardData = plan.cards[1];
         let intraBankCard = `<div class="card card--tick card--red">
                                 <h4 class="card__title">انتقال وجه درون بانکی</h4>
@@ -58,6 +60,7 @@ function showPage(pageId) {
                                 </ul>
                             </div>`;
 
+        //-- add between cards
         const betCardData = plan.cards[2];
         let betweenBankCard = `<div class="card card--tick card--blue">
                                    <h4 class="card__title">انتقال وجه بین بانکی</h4>
@@ -76,11 +79,13 @@ function showPage(pageId) {
                                        </li>
                                    </ul>
                                </div>`;
-
+        //--join all card
         let cards = generalCard + intraBankCard + betweenBankCard;
         let planBody = `<div class="plan__body">${cards}</div>`;
 
-        //plan footer--------------------------------------------------------
+        //----------------------------------- plan footer ----------------------------------------------------
+        //-- add help cards
+        //-- add description
         let description = '';
         if (plan.cards[3].description.length !== 0) {
             let descriptions = '';
@@ -94,6 +99,8 @@ function showPage(pageId) {
                               <ul class="list list--tick card__list">${descriptions}</ul>
                            </div>`;
         }
+
+        //-- add notes
         let note = '';
         if (plan.cards[3].note.length !== 0) {
             let notes = '';
@@ -108,17 +115,20 @@ function showPage(pageId) {
                     </div>`;
         }
 
+        //--join all card
         let planFooter = `<div class="plan__footer">${description}${note}</div>`;
-        plans += `<div class="plan">${planHedaer}${planBody}${planFooter}</div>`;
+        //------------------------------------------------------------------------------------------------
 
+        //--join all plans
+        plans += `<div class="plan">${planHedaer}${planBody}${planFooter}</div>`;
     });
 
     let pageBody = `<div class="page__body">${plans}</div>`;
 
-    //-- Create page Element ------------------------------------------------
+    //--------------------------------- Create page Element ------------------------------------------------
     pageElement.innerHTML = pageHeader + pageBody;
 
-    //-- Format all number in page
+    //-------------------------------- Format all number in page
     const numbers = document.querySelectorAll(".card__value");
     numbers.forEach((item) => {
         const number = currencyFormat(parseInt(item.innerHTML));
@@ -126,29 +136,21 @@ function showPage(pageId) {
             item.innerHTML = number;
         }
     });
-
-    //--Set Nice Scroll to Page Body
-    $('.page__body').niceScroll({
-        railalign: 'left',
-        rtlmode: true,
-        cursorcolor: '#ee1c25',
-        cursoropacitymax: 0.7,
-        boxzoom: false,
-        touchbehavior: false
-    });
 };
 
 function currencyFormat(num) {
     return num.toLocaleString();
 }
 
-/************************************ Formating ****************************** */
+//----------------------------------- Formating ----------------------------------
 $(document).ready(function () {
     showPage(0);
+    //-- Set Nice Scroll to Page Body
+    // $('.page__body').niceScroll();
 });
 
 
-// navigation toggle click-----------------------
+//---------------------------- navigation toggle click----------------------------
 function toggler_click() {
     const nav = document.getElementById('nav');
     nav.classList.toggle('nav--expanded');
@@ -159,35 +161,35 @@ function toggler_click() {
 const tabs = document.querySelectorAll(".tab__item");
 const navs = document.querySelectorAll(".nav__item");
 
-// tabs click------------------------------------
+//--------------------------------- tabs click------------------------------------
 tabs.forEach((item) =>
     item.addEventListener("click", function () {
         removeActive(tabs, navs);
         setAction(this);
     }));
 
-// nav click------------------------------------
+//--------------------------------- nav click------------------------------------
 navs.forEach((item) =>
     item.addEventListener("click", function () {
         removeActive(tabs, navs);
         setAction(this);
     }));
 
-// Remove Active Navigation & Tabs    
+//----------------------- Remove Active Navigation & Tabs ----------------------
 function removeActive(tabs, navs) {
 
-    //--------------Remove Active-----------------
+    //-- Remove Active-----------------
     tabs.forEach((item) => {
         item.classList.remove("tab--active");
     });
 
-    //--------------Remove Active-----------------
+    //-- Remove Active-----------------
     navs.forEach((item) => {
         item.classList.remove("nav--active");
     });
 }
 
-// Set Active Navigation & Tabs    
+//------------------------ Set Active Navigation & Tabs -------------------------
 function setAction(item) {
     const itemId = item.getAttribute("item_id");
     if (itemId == "1" || itemId == "11") {
