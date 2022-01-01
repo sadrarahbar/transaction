@@ -1,8 +1,9 @@
 const pages = [{
-    pageId: '1',
+    pageId: 0,
     pageName: 'اشخاص حقیقی ایرانی',
+    pageIcon: 'IranUser',
     plans: [{
-        planId: '1',
+        planId: 1,
         planName: 'مراجعه حضوری به شعب',
         cards: [{
             cardType: 'general',
@@ -29,8 +30,8 @@ const pages = [{
             ]
         }]
     }, {
-        planId: '2',
-        planName: 'تجهیزات مکانیزه ATM, BTM, CRS, BCR, VTMمراجعه حضوری به شعب',
+        planId: 2,
+        planName: 'تجهیزات مکانیزه ATM, BTM, CRS, BCR, VTM مراجعه حضوری به شعب',
         cards: [{
             cardType: 'general',
             cashDeposit: '100000000',
@@ -45,10 +46,13 @@ const pages = [{
             cardType: 'betweenBank',
             cardToCard: '100000000',
             paya: '----',
-            satna: '----'
+            paya: '----'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '3',
+        planId: 3,
         planName: 'کیوسک و کش لس',
         cards: [{
             cardType: 'general',
@@ -65,9 +69,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '----',
             satna: '----'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '4',
+        planId: 4,
         planName: 'سامانه بام، همراه بام',
         cards: [{
             cardType: 'general',
@@ -84,9 +91,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '500000000',
             satna: '1000000000'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '5',
+        planId: 5,
         planName: 'سامانه سبا',
         cards: [{
             cardType: 'general',
@@ -103,9 +113,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '250000000',
             satna: '500000000'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '6',
+        planId: 6,
         planName: 'همراه بانک',
         cards: [{
             cardType: 'general',
@@ -122,9 +135,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '250000000',
             satna: '500000000'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '7',
+        planId: 7,
         planName: 'سایر اپلیکیشن ها (ایوا، بله، شصت و...)',
         cards: [{
             cardType: 'general',
@@ -141,13 +157,17 @@ const pages = [{
             cardToCard: '100000000',
             paya: '----',
             satna: '----'
+        }, {
+            description: [],
+            note: []
         }]
     }]
 }, {
-    pageId: '2',
+    pageId: 1,
     pageName: 'اشخاص حقیقی ایرانی محجور( زیر 18 سال )',
+    pageIcon: 'IranUser18',
     plans: [{
-        planId: '1',
+        planId: 1,
         planName: 'مراجعه حضوری به شعب',
         cards: [{
             cardType: 'general',
@@ -176,10 +196,13 @@ const pages = [{
                 'افتتاح حساب پس انداز و تحویل کارت برای اشخاص بالای 15 سال بدون حضور نماینده قانونی انجام می پذیرد.',
                 'افتتاح حساب پس انداز برای اشخاص بالای 12 سال با شرط برداشت رسیدن به سن 15 سال انجام می پذیرد.'
             ]
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '2',
-        planName: 'تجهیزات مکانیزه ATM, BTM, CRS, BCR, VTMمراجعه حضوری به شعب',
+        planId: 2,
+        planName: 'تجهیزات مکانیزه ATM, BTM, CRS, BCR, VTM مراجعه حضوری به شعب',
         cards: [{
             cardType: 'general',
             cashDeposit: '100000000',
@@ -195,9 +218,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '----',
             satna: '----'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '3',
+        planId: 3,
         planName: 'کیوسک و کش لس',
         cards: [{
             cardType: 'general',
@@ -214,9 +240,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '----',
             satna: '----'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '4',
+        planId: 4,
         planName: 'سامانه بام، همراه بام',
         cards: [{
             cardType: 'general',
@@ -233,9 +262,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '500000000',
             satna: '1000000000'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '5',
+        planId: 5,
         planName: 'سامانه سبا',
         cards: [{
             cardType: 'general',
@@ -252,9 +284,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '250000000',
             satna: '500000000'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '6',
+        planId: 6,
         planName: 'همراه بانک',
         cards: [{
             cardType: 'general',
@@ -271,9 +306,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '250000000',
             satna: '500000000'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '7',
+        planId: 7,
         planName: 'سایر اپلیکیشن ها (ایوا، بله، شصت و...)',
         cards: [{
             cardType: 'general',
@@ -290,13 +328,17 @@ const pages = [{
             cardToCard: '100000000',
             paya: '----',
             satna: '----'
+        }, {
+            description: [],
+            note: []
         }]
     }]
 }, {
-    pageId: '3',
+    pageId: 2,
     pageName: 'اشخاص حقوقی ایرانی',
+    pageIcon: 'IranCompany',
     plans: [{
-        planId: '1',
+        planId: 1,
         planName: 'مراجعه حضوری به شعب',
         cards: [{
             cardType: 'general',
@@ -321,10 +363,13 @@ const pages = [{
             ],
             note: [
             ]
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '2',
-        planName: 'تجهیزات مکانیزه ATM, BTM, CRS, BCR, VTMمراجعه حضوری به شعب',
+        planId: 2,
+        planName: 'تجهیزات مکانیزه ATM, BTM, CRS, BCR, VTM مراجعه حضوری به شعب',
         cards: [{
             cardType: 'general',
             cashDeposit: '100000000',
@@ -340,9 +385,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '----',
             satna: '----'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '3',
+        planId: 3,
         planName: 'کیوسک و کش لس',
         cards: [{
             cardType: 'general',
@@ -359,9 +407,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '----',
             satna: '----'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '4',
+        planId: 4,
         planName: 'سامانه بام شرکتی و سازمانی',
         cards: [{
             cardType: 'general',
@@ -378,9 +429,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '500000000',
             satna: '1000000000'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '5',
+        planId: 5,
         planName: 'سامانه  BIB',
         cards: [{
             cardType: 'general',
@@ -397,13 +451,17 @@ const pages = [{
             cardToCard: '100000000',
             paya: '250000000',
             satna: '500000000'
+        }, {
+            description: [],
+            note: []
         }]
     }]
 }, {
-    pageId: '4',
+    pageId: 3,
     pageName: 'اشخاص حقیقی غیر ایرانی(اتباع بیگانه)',
+    pageIcon: 'ForeignUser',
     plans: [{
-        planId: '1',
+        planId: 1,
         planName: 'مراجعه حضوری به شعب',
         cards: [{
             cardType: 'general',
@@ -429,10 +487,13 @@ const pages = [{
             ],
             note: [
             ]
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '2',
-        planName: 'تجهیزات مکانیزه ATM, BTM, CRS, BCR, VTMمراجعه حضوری به شعب',
+        planId: 2,
+        planName: 'تجهیزات مکانیزه ATM, BTM, CRS, BCR, VTM مراجعه حضوری به شعب',
         cards: [{
             cardType: 'general',
             cashDeposit: '100000000',
@@ -448,9 +509,12 @@ const pages = [{
             cardToCard: '100000000',
             paya: '----',
             satna: '----'
+        }, {
+            description: [],
+            note: []
         }]
     }, {
-        planId: '3',
+        planId: 3,
         planName: 'کیوسک و کش لس',
         cards: [{
             cardType: 'general',
@@ -467,13 +531,17 @@ const pages = [{
             cardToCard: '100000000',
             paya: '----',
             satna: '----'
+        }, {
+            description: [],
+            note: []
         }]
     }]
 }, {
-    pageId: '5',
+    pageId: 4,
     pageName: 'اشخاص حقوقی غیر ایرانی(اتباع بیگانه)',
+    pageIcon: 'ForeignCompany',
     plans: [{
-        planId: '1',
+        planId: 1,
         planName: 'مراجعه حضوری به شعب',
         cards: [{
             cardType: 'general',
@@ -498,6 +566,9 @@ const pages = [{
             ],
             note: [
             ]
+        }, {
+            description: [],
+            note: []
         }]
     }]
 }
