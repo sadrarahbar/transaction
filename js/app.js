@@ -4,7 +4,7 @@ function showPage(pageId) {
     let pageElement = document.getElementById('page');
 
     //----------------------------------- Create page header ------------------------------------------------
-    let pageHeader = `<div class="page__header" data-aos="fade-zoom" data-aos-duration="2500">
+    let pageHeader = `<div class="page__header animate__animated animate__flipInX" style="--animate-duration:0.5s;">
                             <svg class="icon icon--large">
                                 <use xlink:href="images/sprite.svg#${page.pageIcon}"></use>
                             </svg>
@@ -13,6 +13,7 @@ function showPage(pageId) {
 
     //-------------------------------------- Create plans ----------------------------------------------------
     let plans = '';
+    let delay = 0.3;
     page.plans.forEach(plan => {
 
         //----------------------------------- plan header -------------------------------------------------
@@ -120,7 +121,7 @@ function showPage(pageId) {
         //------------------------------------------------------------------------------------------------
 
         //--join all plans
-        plans += `<div class="plan">${planHedaer}${planBody}${planFooter}</div>`;
+        plans += `<div class="plan animate__animated animate__bounceInLeft" style="--animate-duration: ${delay += 0.5}s;">${planHedaer}${planBody}${planFooter}</div>`;
     });
 
     let pageBody = `<div class="page__body">${plans}</div>`;
@@ -133,7 +134,7 @@ function showPage(pageId) {
     numbers.forEach((item) => {
         const number = currencyFormat(parseInt(item.innerHTML));
         if (number !== 'NaN') {
-            item.innerHTML = number;
+            item.innerHTML = number + `<span class='card__currency'>ریال</span>`;
         }
     });
 };

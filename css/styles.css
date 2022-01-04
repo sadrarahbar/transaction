@@ -8,7 +8,7 @@
   --color-heading: #000000;
   --color-border: #e7e7e8;
   --color-text-black: #000;
-  --color-text-green: #0b9e0b;
+  --color-text-green: #0e7c0e;
   --color-text-gray: #646466;
   --color-text-gold: #d2ac67;
   --color-text-red: #d2ac67;
@@ -368,6 +368,12 @@ ul {
   margin: 0 5px;
   line-height: 1.8;
 }
+.card__currency {
+  margin-right: 5px;
+  font-size: 1.4rem;
+  color: #888;
+  font-weight: normal;
+}
 .card--red .card__title {
   color: var(--color-secondary);
 }
@@ -473,7 +479,9 @@ ul {
 }
 .page__title {
   margin-right: 5px;
+  position: relative;
 }
+
 @media screen and (min-width: 1024px) {
   .page {
     display: grid;
@@ -592,6 +600,7 @@ ul {
     grid-gap: 25px;
     height: 100vh;
     padding: 25px;
+    overflow-x: hidden;
   }
   .grid--1x2 {
     grid-template: auto / 30rem 1fr;
