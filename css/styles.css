@@ -593,6 +593,7 @@ ul {
   grid-gap: 15px;
   height: auto;
   padding: 15px;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 1024px) {
